@@ -14,30 +14,34 @@ public class StatServiceTest {
 
 
     }
+
     @Test
     public void shoulFindAverageOfSales() {
-        StatsService service= new StatsService();
+        StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedAverageOfSales=15;
-        int actualAverageOfSales= service.getAverageOfSales(sales);
+        int expectedAverageOfSales = 15;
+        int actualAverageOfSales = service.getAverageOfSales(sales);
         Assertions.assertEquals(expectedAverageOfSales, actualAverageOfSales);
     }
+
     @Test
     public void MonthOfMaxSale() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedMonthOfMaxSale=8;
-        int actualMonthOfMaxSale= service.getMonthOfMaxSale(sales);
+        int expectedMonthOfMaxSale = 8;
+        int actualMonthOfMaxSale = service.getMonthOfMaxSale(sales);
         Assertions.assertEquals(expectedMonthOfMaxSale, actualMonthOfMaxSale);
     }
+
     @Test
     public void MonthOfMinSale() {
         StatsService service = new StatsService();
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        int expectedMonthOfMinSale=9;
-        int actualMonthOfMinSale= service.getMonthOfMinSale(sales);
+        int expectedMonthOfMinSale = 9;
+        int actualMonthOfMinSale = service.getMonthOfMinSale(sales);
         Assertions.assertEquals(expectedMonthOfMinSale, actualMonthOfMinSale);
     }
+
     @Test
     public void SumOfTheMonthsBelowTheAverage() {
         StatsService service = new StatsService();
@@ -46,6 +50,7 @@ public class StatServiceTest {
         int actualSumOfTheMonthsBelowTheAverage = service.getSumOfTheMonthsBelowTheAverage(sales);
         Assertions.assertEquals(expectedSumOfTheMonthsBelowTheAverage, actualSumOfTheMonthsBelowTheAverage);
     }
+
     @Test
     public void SumOfTheMonthsBeforeTheAverage() {
         StatsService service = new StatsService();

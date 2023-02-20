@@ -12,47 +12,49 @@ public class StatsService {
 
 
     public int getAverageOfSales(int[] sales) {
-        int averageOfSales=0;
+        int averageOfSales = 0;
         int sum = sumAllSales(sales);
         int length = sales.length;
-        averageOfSales=sum / length;
+        averageOfSales = sum / length;
         return averageOfSales;
     }
 
     public int getMonthOfMaxSale(int[] sales) {
-        int maxSaleMonth=0;
-        for (int i=0; i<sales.length; i++) {
+        int maxSaleMonth = 0;
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[maxSaleMonth]) {
-                maxSaleMonth=i;
+                maxSaleMonth = i;
             }
         }
-        return maxSaleMonth+1;
+        return maxSaleMonth + 1;
     }
 
     public int getMonthOfMinSale(int[] sales) {
-        int minSaleMonth=0;
-        for (int i=0; i<sales.length; i++) {
+        int minSaleMonth = 0;
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[minSaleMonth]) {
-                minSaleMonth=i;
+                minSaleMonth = i;
             }
         }
-        return minSaleMonth+1;
+        return minSaleMonth + 1;
     }
+
     public int getSumOfTheMonthsBelowTheAverage(int[] sales) {
         int monthsBelowTheAverage = 0;
         int averageOfSales = getAverageOfSales(sales);
-        for (int i=0; i<sales.length; i++) {
-            if (sales [i] < averageOfSales) {
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] < averageOfSales) {
                 monthsBelowTheAverage++;
             }
         }
         return monthsBelowTheAverage;
     }
+
     public int getSumOfTheMonthsBeforeTheAverage(int[] sales) {
         int monthsBeforeTheAverage = 0;
         int averageOfSales = getAverageOfSales(sales);
-        for (int i=0; i<sales.length; i++) {
-            if (sales [i] > averageOfSales)
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] > averageOfSales)
                 monthsBeforeTheAverage++;
         }
         return monthsBeforeTheAverage;
